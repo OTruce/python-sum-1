@@ -69,6 +69,7 @@ def calculate_average_word_length(text):
 # -----------------------------------
 # Function 4: Count Paragraphs
 # -----------------------------------
+
 def count_paragraphs(text):
     if text.strip() == "":
         return 1
@@ -81,6 +82,7 @@ def count_paragraphs(text):
 # -----------------------------------
 # Function 5: Count Sentences
 # -----------------------------------
+
 def count_sentences(text):
     if text.strip() == "":
         return 1
@@ -90,9 +92,6 @@ def count_sentences(text):
     return len(sentences)
 
 
-# -----------------------------------
-# Main Program
-# -----------------------------------
 
 filename = "news-article.txt"
 
@@ -105,9 +104,7 @@ except FileNotFoundError:
     article = ""
 
 
-# -------------------------------
-# While loop (required by rubric)
-# -------------------------------
+
 
 choice = ""
 
