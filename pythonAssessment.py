@@ -1,7 +1,7 @@
 import re
 
 # -----------------------------------
-# Function 1: Count Specific Word
+#   Count Specific Word
 # -----------------------------------
 def count_specific_word(text, search_word):
     if text == "" or search_word == "":
@@ -20,7 +20,7 @@ def count_specific_word(text, search_word):
 
 
 # -----------------------------------
-# Function 2: Identify Most Common Word
+#   Identify Most Common Word
 # -----------------------------------
 def identify_most_common_word(text):
     if text.strip() == "":
@@ -48,7 +48,7 @@ def identify_most_common_word(text):
 
 
 # -----------------------------------
-# Function 3: Average Word Length
+#   Average Word Length
 # -----------------------------------
 def calculate_average_word_length(text):
     if text.strip() == "":
@@ -67,7 +67,7 @@ def calculate_average_word_length(text):
 
 
 # -----------------------------------
-# Function 4: Count Paragraphs
+#   Count Paragraphs
 # -----------------------------------
 
 def count_paragraphs(text):
@@ -80,7 +80,7 @@ def count_paragraphs(text):
 
 
 # -----------------------------------
-# Function 5: Count Sentences
+#   Count Sentences
 # -----------------------------------
 
 def count_sentences(text):
