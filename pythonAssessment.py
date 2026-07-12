@@ -93,56 +93,113 @@ def count_sentences(text):
 
 
 
-filename = "news-article.txt"
+# filename = "news-article.txt"
 
-try:
-    with open(filename, "r", encoding="utf-8") as file:
-        article = file.read()
+# try:
+#     with open(filename, "r", encoding="utf-8") as file:
+#         article = file.read()
 
-except FileNotFoundError:
-    print("File not found.")
-    article = ""
-
-
+# except FileNotFoundError:
+#     print("File not found.")
+#     article = ""
 
 
-choice = ""
 
-while choice.lower() != "q":
 
-    print("\nNews Article Analysis")
-    print("1. Count specific word")
-    print("2. Identify most common word")
-    print("3. Average word length")
-    print("4. Count paragraphs")
-    print("5. Count sentences")
-    print("Q. Quit")
+# choice = ""
 
-    choice = input("Choose an option: ")
+# while choice.lower() != "q":
 
-    if choice == "1":
-        word = input("Enter a word to search for: ")
-        count = count_specific_word(article, word)
-        print(f'"{word}" appears {count} times.')
+#     print("\nNews Article Analysis")
+#     print("1. Count specific word")
+#     print("2. Identify most common word")
+#     print("3. Average word length")
+#     print("4. Count paragraphs")
+#     print("5. Count sentences")
+#     print("Q. Quit")
 
-    elif choice == "2":
-        common = identify_most_common_word(article)
-        print("Most common word:", common)
+#     choice = input("Choose an option: ")
 
-    elif choice == "3":
-        avg = calculate_average_word_length(article)
-        print("Average word length:", round(avg, 2))
+#     if choice == "1":
+#         word = input("Enter a word to search for: ")
+#         count = count_specific_word(article, word)
+#         print(f'"{word}" appears {count} times.')
 
-    elif choice == "4":
-        paragraphs = count_paragraphs(article)
-        print("Paragraphs:", paragraphs)
+#     elif choice == "2":
+#         common = identify_most_common_word(article)
+#         print("Most common word:", common)
 
-    elif choice == "5":
-        sentences = count_sentences(article)
-        print("Sentences:", sentences)
+#     elif choice == "3":
+#         avg = calculate_average_word_length(article)
+#         print("Average word length:", round(avg, 2))
 
-    elif choice.lower() == "q":
-        print("Program ended.")
+#     elif choice == "4":
+#         paragraphs = count_paragraphs(article)
+#         print("Paragraphs:", paragraphs)
 
-    else:
-        print("Invalid option.")
+#     elif choice == "5":
+#         sentences = count_sentences(article)
+#         print("Sentences:", sentences)
+
+#     elif choice.lower() == "q":
+#         print("Program ended.")
+
+#     else:
+#         print("Invalid option.")
+
+
+def main():
+    filename = "news-article.txt"
+
+    try:
+        with open(filename, "r", encoding="utf-8") as file:
+            article = file.read()
+
+    except FileNotFoundError:
+        print("File not found.")
+        article = ""
+
+    choice = ""
+
+    while choice.lower() != "q":
+
+        print("\nNews Article Analysis")
+        print("1. Count specific word")
+        print("2. Identify most common word")
+        print("3. Average word length")
+        print("4. Count paragraphs")
+        print("5. Count sentences")
+        print("Q. Quit")
+
+        choice = input("Choose an option: ")
+
+        if choice == "1":
+            word = input("Enter a word to search for: ")
+            count = count_specific_word(article, word)
+            print(f'"{word}" appears {count} times.')
+
+        elif choice == "2":
+            common = identify_most_common_word(article)
+            print("Most common word:", common)
+
+        elif choice == "3":
+            avg = calculate_average_word_length(article)
+            print("Average word length:", round(avg, 2))
+
+        elif choice == "4":
+            paragraphs = count_paragraphs(article)
+            print("Paragraphs:", paragraphs)
+
+        elif choice == "5":
+            sentences = count_sentences(article)
+            print("Sentences:", sentences)
+
+        elif choice.lower() == "q":
+            print("Program ended.")
+
+        else:
+            print("Invalid option.")
+
+
+if __name__ == "__main__":
+    main()
